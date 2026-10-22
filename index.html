@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aashka's portfolio - frontend and full-stack web developer.">
+  <title>Aashka | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#home" class="logo">Aashka</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">Hi, I'm</p>
+        <h1>Aashka</h1>
+        <p class="tagline">Frontend &amp; Full-Stack Web Developer</p>
+        <p class="hero-text">I build fast, accessible and responsive web apps with React, TypeScript and Node.js.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn">View Projects</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <div>
+          <h2>About Me</h2>
+          <p>I'm a B.Tech Computer Science student who enjoys turning ideas into clean, usable interfaces. I care about accessibility, performance and well-structured code.</p>
+          <p>Outside of coursework, I complete internships, build side projects and keep learning new tools.</p>
+        </div>
+        <aside class="about-card">
+          <h3>Quick Facts</h3>
+          <ul>
+            <li>B.Tech CSE, 2024&ndash;2028</li>
+            <li>Focus: Frontend &amp; Full-Stack</li>
+            <li>Accessibility-minded</li>
+            <li>Open to internships</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <h2>Skills</h2>
+        <ul class="skills-grid" id="skillsGrid"></ul>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="toolbar">
+          <div class="filters" role="group" aria-label="Filter projects">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="react">React</button>
+            <button class="filter-btn" data-filter="javascript">JavaScript</button>
+            <button class="filter-btn" data-filter="html-css">HTML/CSS</button>
+          </div>
+          <label class="visually-hidden" for="searchInput">Search projects</label>
+          <input type="search" id="searchInput" placeholder="Search projects...">
+        </div>
+        <div class="projects-grid" id="projectsGrid"></div>
+        <p class="no-results" id="noResults" hidden>No projects match your search.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-alt">
+      <div class="container contact-wrap">
+        <h2>Contact</h2>
+        <form id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name">
+            <small class="error" id="nameError"></small>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email">
+            <small class="error" id="emailError"></small>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+            <small class="error" id="messageError"></small>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+          <p class="form-success" id="formSuccess" role="status" hidden>Thanks! Your message was validated successfully.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Aashka. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
